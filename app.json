@@ -9,14 +9,21 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.emanuelxcodes.StickerMash",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSPhotoLibraryAddUsageDescription": "Allow $(PRODUCT_NAME) to save photos.",
+        "NSPhotoLibraryUsageDescription": "Allow $(PRODUCT_NAME) to access your photos."
+      }
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "foregroundImage": "./assets/images/icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.emanuelxcodes.StickerMash"
     },
     "web": {
       "bundler": "metro",
@@ -33,10 +40,31 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app needs access to your photos to let you share them with your friends."
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Allow $(PRODUCT_NAME) to access your photos.",
+          "savePhotosPermission": "Allow $(PRODUCT_NAME) to save photos.",
+          "isAccessMediaLocationEnabled": true
+        }
       ]
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "922aac36-b796-4251-893e-6947b2971278"
+      }
+    },
+    "owner": "emanuelxcodes"
   }
 }

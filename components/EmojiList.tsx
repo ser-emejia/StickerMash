@@ -1,13 +1,12 @@
 import React from "react";
 import {
   FlatList,
+  Image,
   ImageSourcePropType,
   Platform,
   Pressable,
   StyleSheet,
 } from "react-native";
-
-import { Image } from "expo-image";
 
 interface Props {
   onCloseModal: () => void;

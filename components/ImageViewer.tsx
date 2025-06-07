@@ -1,6 +1,4 @@
-import { ImageSourcePropType, StyleSheet } from "react-native";
-
-import { Image } from "expo-image";
+import { Image, ImageSourcePropType, StyleSheet } from "react-native";
 
 interface Props {
   imgSource: ImageSourcePropType;
